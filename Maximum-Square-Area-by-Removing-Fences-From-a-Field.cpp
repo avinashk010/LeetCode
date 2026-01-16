@@ -3,7 +3,7 @@
 3    const int MOD = 1e9+7;
 4    int maximizeSquareArea(int m, int n, vector<int>& hFences, vector<int>& vFences) {
 5        long long ans = -1;
-6       set<long long>mp;
+6       unordered_set<long long>mp;
 7        hFences.push_back(1);
 8        hFences.push_back(m);
 9        for(long long i =0; i<hFences.size(); i++){
