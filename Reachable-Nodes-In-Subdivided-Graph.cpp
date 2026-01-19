@@ -68,11 +68,11 @@
 68
 69            for(auto& e : adj[tp]){
 70                if(e.second + cost + 1 < dis[e.first]){
-71                    // if(e.second + cost + 1 > maxMoves){
-72                    //     int left = maxMoves - cost;
-73                    //     mp[{tp, e.first}] = left;
-74                    //     continue;
-75                    // }
+71                    if(e.second + cost + 1 > maxMoves){
+72                        // int left = maxMoves - cost;
+73                        // mp[{tp, e.first}] = left;
+74                        continue;
+75                    }
 76                    dis[e.first] = e.second + cost + 1; 
 77                    pq.push({e.second+cost+1, e.first});
 78                    // mp[{tp,e.second}] = e.second+1;
